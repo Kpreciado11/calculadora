@@ -11,50 +11,7 @@
             integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
             crossorigin="anonymous"
         />
-        <style>
-            .container {
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                justify-content: center;
-                gap: 10px;
-
-                margin-bottom: 1em;
-            }
-
-            .container input {
-                max-width: 10ch;
-                height: 50px;
-                font-size: 20px;
-                text-align: center;
-
-                border-radius: 16px;
-
-                font-weight: bolder;
-                color: #fff;
-                background-color: #ab296a;
-                border: 2px solid #f7d6e6;
-            }
-
-            .container button {
-                width: 100px;
-                height: 50px;
-                font-size: 20px;
-
-                border-radius: 16px;
-
-                color: #fff;
-                background-color: #6f42c1;
-                border-color: #a98eda;
-                font-weight: bolder;
-            }
-
-            @media screen and (max-width: 576px) {
-                .container {
-                    flex-direction: column;
-                }
-            }
-        </style>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <h1 class="font-weight-bolder text-monospace">Calculadora</h1>
@@ -89,39 +46,5 @@
             crossorigin="anonymous"
         ></script>
     </body>
-    <script>
-        let numero1 = document.getElementById("numero1");
-        let numero2 = document.getElementById("numero2");
-        let resultado = document.getElementById("resultado");
-
-        let btn_suma = document.getElementById("btn_suma");
-        let btn_resta = document.getElementById("btn_resta");
-        let btn_multiplicacion = document.getElementById("btn_multiplicacion");
-        let btn_division = document.getElementById("btn_division");
-
-        btn_suma.addEventListener("click", () => {
-            let res = parseInt(numero1.value) + parseInt(numero2.value);
-            resultado.value = res;
-        });
-
-        btn_resta.addEventListener("click", () => {
-            let res = parseInt(numero1.value) - parseInt(numero2.value);
-            resultado.value = res;
-        });
-
-        btn_multiplicacion.addEventListener("click", () => {
-            let res = parseInt(numero1.value) * parseInt(numero2.value);
-            resultado.value = res;
-        });
-
-        btn_division.addEventListener("click", () => {
-            //if (!confirm("¿Desea continuar?")) return;
-            if (numero2.value == 0) {
-                alert("No se puede dividir entre 0");
-                return;
-            }
-            let res = parseInt(numero1.value) / parseInt(numero2.value);
-            resultado.value = res;
-        });
-    </script>
+    <script src="funciones.js">   </script>
 </html>

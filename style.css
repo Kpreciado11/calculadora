@@ -1,0 +1,42 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    margin-bottom: 1em;
+}
+
+.container input {
+    max-width: 10ch;
+    height: 50px;
+    font-size: 20px;
+    text-align: center;
+
+    border-radius: 16px;
+
+    font-weight: bolder;
+    color: #fff;
+    background-color: #ab296a;
+    border: 2px solid #f7d6e6;
+}
+
+.container button {
+    width: 100px;
+    height: 50px;
+    font-size: 20px;
+
+    border-radius: 16px;
+
+    color: #fff;
+    background-color: #6f42c1;
+    border-color: #a98eda;
+    font-weight: bolder;
+}
+
+@media screen and (max-width: 576px) {
+    .container {
+        flex-direction: column;
+    }
+}
